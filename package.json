@@ -1,0 +1,14 @@
+{
+  "name": "uimongodb",
+  "version": "1.0.0",
+  "description": "This UI is designed for the MongoDB purpose",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Allwyen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
