@@ -12,10 +12,10 @@
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="/addstudents">Add Students</a>
+            <a class="nav-link" href="/addstudents">Add Students</a>
             </li>
             <li class="nav-item active">
-            <a class="nav-link" href="/viewstudents">View Students</a>
+                <a class="nav-link" href="/viewstudents">View Students</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="/searchstudents">Search Students</a>
@@ -23,16 +23,14 @@
         </ul>
     </nav>
 
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
             <div class="col col-lg-6">
-                <form action="/read" method="POST">
+                <form action="/viewsinglestudent" method="POST">
                     <table class="table">
-                        <tr><td>Name:</td><td><input type="text" name="uname" class="form-control" id=""></td></tr>
-                        <tr><td>RollNo:</td><td><input type="number" name="uroll" class="form-control" id=""></td></tr>
-                        <tr><td>AdmissionNo:</td><td><input type="text" name="uadno" class="form-control" id=""></td></tr>
-                        <tr><td>College:</td><td><input type="text" name="ucollege" class="form-control" id=""></td></tr>
-                        <tr><td></td><td><input type="submit" class="btn btn-primary" value="Submit"></td></tr>
+                        <tr><td>Admission No:</td><td><input type="text" name="uadno" class="form-control" id=""></td></tr>
+                        <tr><td></td><td><input type="submit" class="btn btn-primary" value="Search"></td></tr>
+                        <tr><td></td><td><a href="/viewsinglestudent">View</a></td></tr>
                     </table>
                 </form>
             </div>

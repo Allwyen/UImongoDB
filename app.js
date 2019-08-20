@@ -70,7 +70,41 @@ app.get('/viewstudents',(req,res)=>{
         var data = JSON.parse(body);
         res.render('view',{data:data});
     });
+});
+
+app.get('/searchstudents',(req,res)=>{
+    res.render('search');
+});
+
+app.get('/admissionno',(req,res)=>{
+    var item = req.query.uadno;
+    //console.log(item);
+    var result = StudentModel.find({uadno:item},(error,data)=>{
+        if(error)
+        {
+            throw error;
+            res.send(error);
+        }
+        else
+        {
+            res.send(data);
+        }
+    })
+
+});
+
+const APIurl2 = "http://localhost:3456/admissionno";
+
+app.post('/viewsinglestudent',(req,res)=>{
+
+    var item = req.body.uadno;
+
+    request(APIurl2+"/?uadno="+item,(error,response,body)=>{
+        var data = JSON.parse(body);
+        res.render('viewsingle',{data:data});
+    })
 })
+
 
 app.listen(process.env.PORT || 3456,()=>{
     console.log("Server running on port::3456...");
