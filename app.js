@@ -103,7 +103,7 @@ app.post('/viewsinglestudent',(req,res)=>{
         var data = JSON.parse(body);
         res.render('viewsingle',{data:data});
     })
-})
+});
 
 
 app.listen(process.env.PORT || 3456,()=>{
